@@ -50,11 +50,12 @@ class FingerPrintHandler extends FingerprintManager.AuthenticationCallback {
         ImageView fingerPrintIcon=((Activity)context).findViewById(R.id.fingerprintimage);
 
         descText.setText(s);
-        if(!b){
-            descText.setTextColor(ContextCompat.getColor(context,R.color.colorAccent));
-        }else{
+        if(b==true){
             descText.setTextColor(ContextCompat.getColor(context,R.color.colorPrimary));
             fingerPrintIcon.setImageResource(R.mipmap.ation_completed);
+
+        }else{
+            descText.setTextColor(ContextCompat.getColor(context,R.color.colorAccent));
         }
     }
     // there is more on Crypto Object
